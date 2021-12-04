@@ -8,7 +8,7 @@ module.exports = {
 	coverageProvider: 'v8',
 	moduleFileExtensions: ['vue', 'js', 'json', 'jsx', 'ts', 'tsx', 'node'],
 	moduleNameMapper: {
-		'@uncle-ui/(.*)$': '<rootDir>/packages/$1',
+		'@demo-ui/(.*)$': '<rootDir>/packages/$1',
 	},
 	preset: 'ts-jest',
 	testEnvironment: 'jsdom',

@@ -24,7 +24,7 @@ const genVueTypes = async (root, outDir = path.resolve(__dirname, '../dist/types
 			outDir,
 			baseUrl: path.resolve(__dirname, '../'),
 			paths: {
-				'@uncle-ui/*': ['packages/*'],
+				'@demo-ui/*': ['packages/*'],
 			},
 			skipLibCheck: true,
 		},

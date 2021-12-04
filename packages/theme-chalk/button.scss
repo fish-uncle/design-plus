@@ -1,0 +1,20 @@
+@use 'mixins' as *;
+@use 'var' as *;
+
+@include b(button) {
+	line-height: 1;
+	white-space: nowrap;
+	cursor: pointer;
+	-webkit-appearance: none;
+	text-align: center;
+	box-sizing: border-box;
+	border: var(--el-border-width-base) var(--el-border-style-base);
+	outline: none;
+	margin: 0;
+	transition: 0.1s;
+	user-select: none;
+	padding: 12px 20px;
+	& + & {
+		margin-left: 10px;
+	}
+}
