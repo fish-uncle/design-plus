@@ -8,7 +8,7 @@ import { buttonEmits, buttonProps } from './button'
 import '@demo-ui/components/button/style/button'
 
 export default defineComponent({
-	name: 'UButton',
+	name: 'DButton',
 	props: buttonProps,
 	emits: buttonEmits,
 	setup(props, { emit }) {
@@ -18,7 +18,7 @@ export default defineComponent({
 
 		const className = computed(() => {
 			const buttonType = props.type || 'default'
-			return ['u-button', buttonType ? 'u-button--' + buttonType : '']
+			return ['d-button', buttonType ? 'd-button--' + buttonType : '']
 		})
 
 		return {

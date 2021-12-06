@@ -4,25 +4,7 @@ module.exports = {
 	description: 'demo-ui',
 	base: '/',
 	head: [['link', { rel: 'icon', href: '/logo.ico' }]],
-	plugins: [
-		'@vuepress/active-header-links',
-		'@vuepress/back-to-top',
-		'@vuepress/medium-zoom',
-		'@vuepress/nprogress',
-		[
-			'@vuepress/plugin-search',
-			{
-				locales: {
-					'/': {
-						placeholder: 'Search',
-					},
-					'/zh/': {
-						placeholder: '搜索',
-					},
-				},
-			},
-		],
-	],
+	plugins: [],
 	themeConfig: {
 		smoothScroll: true,
 		repo: 'fish-uncle/demo-ui',

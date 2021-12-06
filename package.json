@@ -47,6 +47,7 @@
 		"@testing-library/jest-dom": "^5.14.1",
 		"@types/jest": "^27.0.2",
 		"@types/klaw-sync": "^6.0.1",
+		"@types/node": "^16.11.11",
 		"@typescript-eslint/eslint-plugin": "^4.20.0",
 		"@typescript-eslint/parser": "^4.20.0",
 		"@vue/cli-plugin-babel": "~4.5.0",
@@ -86,6 +87,7 @@
 		"prettier": "^2.2.1",
 		"pug": "^3.0.0",
 		"pug-plain-loader": "^1.0.0",
+		"sass": "^1.44.0",
 		"sass-loader": "^10.0.3",
 		"standard-version": "^9.3.1",
 		"stylelint": "^13.3.2",
@@ -97,6 +99,7 @@
 		"ts-jest": "^27.0.5",
 		"ts-morph": "^12.0.0",
 		"typescript": "^4.1.5",
+		"vite-plugin-sass-dts": "^1.1.20",
 		"vitepress": "^0.20.1",
 		"vue-jest": "^5.0.0-alpha.10",
 		"webpack-bundle-analyzer": "^3.9.0"

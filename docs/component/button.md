@@ -1,17 +1,8 @@
 ---
 ---
-
+<d-button>按钮</d-button>
 ```vue
 <template>
-	<v-button>按钮</v-button>
+	<d-button>按钮</d-button>
 </template>
 ```
-:::demo
-```vue
-<template>
-<span>
-	111
-</span>
-</template>
-```
-:::
