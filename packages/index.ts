@@ -1,3 +1,1 @@
-import button from './components/button/src/button.vue'
-
-export { button }
+export * from './components/button'

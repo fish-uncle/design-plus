@@ -49,5 +49,5 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-docs/.vuepress/.cache
-docs/.vuepress/.temp
+docs/.vitepress/.cache
+docs/.vitepress/.temp

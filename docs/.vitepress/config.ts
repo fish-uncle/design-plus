@@ -1,22 +1,34 @@
-import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
-
-const path = require('path')
-
-export default defineUserConfig<DefaultThemeOptions>({
+module.exports = {
 	lang: 'zh-CN',
 	title: 'demo-ui',
 	description: 'demo-ui',
-	alias: {
-		'@demo-ui': path.resolve(__dirname, '../../packages'),
-	},
-	// head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+	head: [['link', { rel: 'icon', href: '/logo.png' }]],
+	plugins: [
+		'@vuepress/active-header-links',
+		'@vuepress/back-to-top',
+		'@vuepress/medium-zoom',
+		'@vuepress/nprogress',
+		[
+			'@vuepress/plugin-search',
+			{
+				locales: {
+					'/': {
+						placeholder: 'Search',
+					},
+					'/zh/': {
+						placeholder: '搜索',
+					},
+				},
+			},
+		],
+	],
 	themeConfig: {
-		logo: 'https://vuejs.org/images/logo.png',
-		navbar: [
+		smoothScroll: true,
+		repo: 'fish-uncle/demo-ui',
+		logo: '/logo.png',
+		nav: [
 			{ text: '指南', link: '/guide/design.html' },
 			{ text: '组件', link: '/component/button.html' },
-			{ text: 'github', link: 'https://github.com/fish-uncle/demo-ui' },
 		],
 		sidebar: {
 			'/guide/': [
@@ -50,4 +62,4 @@ export default defineUserConfig<DefaultThemeOptions>({
 			],
 		},
 	},
-})
+}
