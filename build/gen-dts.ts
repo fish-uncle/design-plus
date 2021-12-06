@@ -96,7 +96,7 @@ const genVueTypes = async (root, outDir = path.resolve(__dirname, '../dist/types
 
 			await fs.promises.writeFile(
 				filepath,
-				outputFile.getText().replace(new RegExp('@dorring-sdk', 'g'), '..'),
+				outputFile.getText().replace(new RegExp('@demo-ui', 'g'), '../../'),
 				'utf8',
 			)
 			console.log(chalk.green('Definition for file: ' + chalk.bold(sourceFile.getBaseName()) + ' generated'))

@@ -28,7 +28,7 @@ module.exports = {
 		},
 	},
 	css: {
-		extract: false,
+		extract: true,
 		sourceMap: false,
 		loaderOptions: {
 			postcss: {
@@ -56,19 +56,7 @@ module.exports = {
 		)
 	},
 	chainWebpack: config => {
-		config.resolve.alias.set('@', resolve('packages'))
-		config.module.rules.delete('svg')
-		config.module
-			.rule('svg-smart')
-			.test(/\.svg$/)
-			.include.add(resolve('packages/vue3/icon'))
-			.end()
-			.use('svg-sprite-loader')
-			.loader('svg-sprite-loader')
-			.options({
-				symbolId: 'game-[name]',
-			})
-			.end()
+		config.resolve.alias.set('@demo-ui', resolve('packages'))
 		if (isProduction) {
 			if (needReport) {
 				config
