@@ -16,7 +16,7 @@
 		"docs:build": "vitepress build docs",
 		"docs:serve": "vitepress serve docs",
 		"serve": "vue-cli-service serve",
-		"build:umd": "vue-cli-service build --mode build --target lib --dest dist packages/index.ts --name demo-ui --no-clean",
+		"build:umd": "vue-cli-service build --mode build --target lib --dest dist packages/index.ts --name index --no-clean",
 		"build:dts": "rimraf dist/types && esno build/gen-dts.ts",
 		"build": "npm run build:dts && npm run build:umd && npm run docs:build",
 		"commit": "git add .&&git-cz",

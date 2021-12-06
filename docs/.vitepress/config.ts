@@ -2,7 +2,8 @@ module.exports = {
 	lang: 'zh-CN',
 	title: 'demo-ui',
 	description: 'demo-ui',
-	head: [['link', { rel: 'icon', href: '/logo.png' }]],
+	base: '/',
+	head: [['link', { rel: 'icon', href: '/logo.ico' }]],
 	plugins: [
 		'@vuepress/active-header-links',
 		'@vuepress/back-to-top',
