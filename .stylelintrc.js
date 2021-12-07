@@ -22,6 +22,7 @@ module.exports = {
 					'else',
 					'for',
 					'each',
+					'use',
 					'while',
 					'mixin',
 					'include',

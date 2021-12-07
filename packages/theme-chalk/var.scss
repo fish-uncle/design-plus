@@ -1,4 +1,7 @@
+@use 'config' as *;
+
 :root {
 	--d-border-width-base: 1px;
 	--d-border-style-base: solid;
+	--d-color-white: $color-white;
 }

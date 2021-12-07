@@ -17,7 +17,14 @@ export default defineComponent({
 
 		const className = computed(() => {
 			const buttonType = props.type || 'default'
-			return ['d-button', buttonType ? 'd-button--' + buttonType : '']
+			return [
+				'd-button',
+				buttonType ? 'd-button--' + buttonType : '',
+				{
+					'is-disabled': props.disabled,
+					'is-round': props.round,
+				},
+			]
 		})
 
 		return {

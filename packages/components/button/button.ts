@@ -1,5 +1,4 @@
 export const buttonType = ['default', 'primary', 'success', 'warning', 'info', 'danger', 'text', '']
-export const buttonNativeType = ['button', 'submit', 'reset']
 
 export const buttonProps = {
 	type: {
@@ -8,10 +7,9 @@ export const buttonProps = {
 		default: '',
 	},
 	loading: Boolean,
-	plain: Boolean,
+	disabled: Boolean,
 	autofocus: Boolean,
 	round: Boolean,
-	circle: Boolean,
 	color: String,
 	autoInsertSpace: {
 		type: Boolean,

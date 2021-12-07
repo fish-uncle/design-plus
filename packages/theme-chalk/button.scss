@@ -1,5 +1,8 @@
 @use 'mixins' as *;
 @use 'var' as *;
+@use 'config' as *;
+
+$d-button-disabled-text-color: var(--d-color-white);
 
 @include b(button) {
 	line-height: 1;
@@ -14,7 +17,40 @@
 	transition: 0.1s;
 	user-select: none;
 	padding: 12px 20px;
+	--d-border-radius-round: 20px;
 	& + & {
 		margin-left: 10px;
+	}
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+
+	&::-moz-focus-inner {
+		border: 0;
+	}
+	@include m(primary) {
+		--d-button-text-color: var(--d-color-white);
+		--d-button-disabled-text-color: var(--d-color-white);
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+
+	@include when(round) {
+		border-radius: var(--d-border-radius-round);
+		padding: 12px 23px;
+	}
+
+	@include when(disabled) {
+		&,
+		&:hover,
+		&:focus {
+			cursor: not-allowed;
+			background-image: none;
+			color: $d-button-disabled-text-color;
+		}
 	}
 }

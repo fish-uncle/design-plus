@@ -9,7 +9,7 @@
 		"vuejs",
 		"vue3",
 		"scss",
-		"vuepress"
+		"vitepress"
 	],
 	"scripts": {
 		"docs:dev": "vitepress dev docs",
@@ -23,7 +23,7 @@
 		"changelog": "standard-version",
 		"test": "jest",
 		"coverall": "cat coverage/lcov.info | coveralls",
-		"stylelint": "stylelint 'src/**/*.{scss,vue}' --config '.stylelintrc.js' --fix"
+		"stylelint": "stylelint 'packages/**/*.{scss,vue}' --config '.stylelintrc.js' --fix"
 	},
 	"dependencies": {
 		"@vitejs/plugin-vue": "^1.10.1",
