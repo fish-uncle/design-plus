@@ -1,0 +1,42 @@
+h2 {
+	margin-top: 2.25rem !important;
+	margin-bottom: 1.25rem !important;
+	padding-bottom: 0.3rem !important;
+	line-height: 1.25 !important;
+	font-size: 1.65rem !important;
+	border-bottom: none !important;
+}
+p {
+	font-size: 14px;
+}
+table {
+	font-size: 14px;
+	margin-bottom: 45px;
+	line-height: 1.5em;
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 100%;
+	display: table;
+	
+	thead {
+		border: none;
+	}
+	th,
+	td {
+		border: none;
+		max-width: 250px;
+		white-space: pre-wrap;
+		text-align: left;
+		border-bottom: 1px solid #dcdfe6;
+	}
+	tr {
+		border-top: none;
+		border-bottom: 1px solid #dcdfe6;
+		&:nth-child(2n) {
+			background-color: transparent;
+		}
+	}
+}
+.container {
+	max-width: 55rem !important;
+}

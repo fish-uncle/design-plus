@@ -6,7 +6,6 @@ module.exports = {
 	head: [['link', { rel: 'icon', href: '/logo.ico' }]],
 	plugins: [],
 	themeConfig: {
-		smoothScroll: true,
 		repo: 'fish-uncle/demo-ui',
 		logo: '/logo.png',
 		nav: [

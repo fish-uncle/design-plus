@@ -51,3 +51,4 @@ yarn-error.log*
 
 docs/.vitepress/.cache
 docs/.vitepress/.temp
+/coverage/

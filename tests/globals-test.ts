@@ -1,1 +1,1 @@
-require('fake-indexeddb/auto')
+

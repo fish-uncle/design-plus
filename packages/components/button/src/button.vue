@@ -1,11 +1,10 @@
 <template lang="pug">
-button(:class="className" @click="handleClick" :type="nativeType"  :autofocus="autofocus")
+button(:class="className" @click="handleClick" :autofocus="autofocus")
 	slot
 </template>
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
 import { buttonEmits, buttonProps } from './button'
-import '@demo-ui/components/button/style/button'
 
 export default defineComponent({
 	name: 'DButton',
@@ -28,3 +27,6 @@ export default defineComponent({
 	},
 })
 </script>
+<style lang="scss" scoped>
+@import '@demo-ui/theme-chalk/button.scss';
+</style>

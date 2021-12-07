@@ -1,10 +1,12 @@
-import button from '@demo-ui/components/button/src/button.vue'
+// @ts-ignore
+import demoUI from '@demo-ui'
 import DefaultTheme from 'vitepress/dist/client/theme-default'
+import './doc.scss'
 
 export default {
 	...DefaultTheme,
 	logo: '/logo.png',
 	enhanceApp: ({ app }) => {
-		app.component(button.name, button)
+		app.use(demoUI)
 	},
 }
