@@ -9,7 +9,7 @@
 - 💪 Vue 3 Composition API
 - 🔥 Written in TypeScript
 
-## 打包API
+## 打包
 ```shell
 npm run build
 ```
