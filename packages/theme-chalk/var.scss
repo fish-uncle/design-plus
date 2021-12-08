@@ -5,7 +5,6 @@
 	--d-border-radius-round: 20px;
 	--d-border-style-base: solid;
 	--d-color-white: #{$color-white};
-	--d-color-primary: #{$color-primary};
 	--d-color-black: #{$color-black};
 	--d-color-success: #{$color-success};
 	--d-color-error: #{$color-error};
@@ -13,4 +12,15 @@
 	--d-color-info: #{$color-info};
 	--d-color-danger: #{$color-danger};
 	--d-text-color-regular : #{$text-color-regular};
+	
+	--d-color-primary: #{$color-primary};
+	--d-color-primary-light-1 : #{$color-primary-light-1};
+	--d-color-primary-light-2 : #{$color-primary-light-2};
+	--d-color-primary-light-3 : #{$color-primary-light-3};
+	--d-color-primary-light-4 : #{$color-primary-light-4};
+	--d-color-primary-light-5 : #{$color-primary-light-5};
+	--d-color-primary-light-6 : #{$color-primary-light-6};
+	--d-color-primary-light-7 : #{$color-primary-light-7};
+	--d-color-primary-light-8 : #{$color-primary-light-8};
+	--d-color-primary-light-9 : #{$color-primary-light-9};
 }

@@ -24,10 +24,6 @@ module.exports = {
 					link: '/guide/design.html',
 				},
 				{
-					text: '导航',
-					link: '/guide/nav.html',
-				},
-				{
 					text: '安装',
 					link: '/guide/installation.html',
 				},
