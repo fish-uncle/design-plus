@@ -4,7 +4,7 @@ export const buttonProps = {
 	type: {
 		type: String,
 		values: buttonType,
-		default: '',
+		default: 'default',
 	},
 	loading: Boolean,
 	disabled: Boolean,

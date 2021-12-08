@@ -2,6 +2,15 @@
 
 :root {
 	--d-border-width-base: 1px;
+	--d-border-radius-round: 20px;
 	--d-border-style-base: solid;
-	--d-color-white: $color-white;
+	--d-color-white: #{$color-white};
+	--d-color-primary: #{$color-primary};
+	--d-color-black: #{$color-black};
+	--d-color-success: #{$color-success};
+	--d-color-error: #{$color-error};
+	--d-color-warning: #{$color-warning};
+	--d-color-info: #{$color-info};
+	--d-color-danger: #{$color-danger};
+	--d-text-color-regular : #{$text-color-regular};
 }

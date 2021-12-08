@@ -1,8 +1,6 @@
 @use 'mixins' as *;
-@use 'var' as *;
 @use 'config' as *;
-
-$d-button-disabled-text-color: var(--d-color-white);
+@use 'var' as *;
 
 @include b(button) {
 	line-height: 1;
@@ -11,32 +9,67 @@ $d-button-disabled-text-color: var(--d-color-white);
 	-webkit-appearance: none;
 	text-align: center;
 	box-sizing: border-box;
-	border: var(--d-border-width-base) var(--d-border-style-base);
+	color: var(--d-button-text-color);
+	background-color: var(--d-button-bg-color);
+	border: var(--d-border-width-base) var(--d-border-style-base) var(--d-button-border-color);
+	border-color: var(--d-button-border-color);
 	outline: none;
 	margin: 0;
 	transition: 0.1s;
 	user-select: none;
 	padding: 12px 20px;
-	--d-border-radius-round: 20px;
+	--d-button-text-color: var(--d-color-white);
+	--d-button-hover-text-color: var(--d-color-white);
+	--d-button-disabled-text-color: var(--d-color-white);
+	--d-button-active-text-color: var(--d-color-white);
+	--d-button-border-color: #dcdfe6;
+	--d-button-bg-color: var(--d-color-white);
+
 	& + & {
 		margin-left: 10px;
 	}
-
 	&:hover,
 	&:focus {
+		color: var(--d-button-hover-text-color);
+		background-color: var(--d-button-hover-bg-color);
+		border-color: var(--d-button-hover-border-color, var(--d-button-hover-bg-color));
+		outline: none;
+	}
+	&:active {
+		color: var(--d-button-active-text-color);
+		border-color: var(--d-button-active-border-color, var(--d-button-active-bg-color));
+		background-color: var(--d-button-active-bg-color, var(--d-button-bg-color));
 		outline: none;
 	}
 
 	&::-moz-focus-inner {
 		border: 0;
 	}
+	@include m(default) {
+		--d-button-hover-text-color: var(--d-color-primary);
+		--d-button-active-text-color: var(--d-color-primary);
+		--d-button-disabled-text-color: #c0c4cc;
+		--d-button-text-color: var(--d-text-color-regular);
+	}
+	
 	@include m(primary) {
-		--d-button-text-color: var(--d-color-white);
-		--d-button-disabled-text-color: var(--d-color-white);
+		--d-button-bg-color: var(--d-color-primary);
+	}
 
-		&:hover {
-			color: $color-primary;
-		}
+	@include m(success) {
+		--d-button-bg-color: var(--d-color-success);
+	}
+
+	@include m(info) {
+		--d-button-bg-color: var(--d-color-info);
+	}
+
+	@include m(warning) {
+		--d-button-bg-color: var(--d-color-warning);
+	}
+
+	@include m(danger) {
+		--d-button-bg-color: var(--d-color-danger);
 	}
 
 	@include when(round) {
@@ -49,8 +82,9 @@ $d-button-disabled-text-color: var(--d-color-white);
 		&:hover,
 		&:focus {
 			cursor: not-allowed;
-			background-image: none;
-			color: $d-button-disabled-text-color;
+			color: var(--d-button-disabled-text-color);
+			background-color: var(--d-button-disabled-bg-color);
+			border-color: var(--d-button-disabled-border-color);
 		}
 	}
 }
