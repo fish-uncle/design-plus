@@ -7,34 +7,29 @@ import autoprefixer from 'gulp-autoprefixer'
 import cleanCSS from 'gulp-clean-css'
 
 const distFolder = path.resolve(__dirname, '../dist/style')
-const distBundle = path.resolve(__dirname, '../packages/theme-chalk')
+const entryFolder = path.resolve(__dirname, '../packages/theme-chalk/**.scss')
 
 function buildThemeChalk() {
 	const sass = gulpSass(dartSass)
-	return src(path.resolve(__dirname, '../packages/theme-chalk/**.scss'))
+	return src(entryFolder)
 		.pipe(sass.sync())
 		.pipe(autoprefixer({ cascade: false }))
 		.pipe(
-			cleanCSS({}, (details) => {
+			cleanCSS({}, details => {
 				console.log(
 					`${chalk.cyan(details.name)}: ${chalk.yellow(
-						details.stats.originalSize / 1000
-					)} KB -> ${chalk.green(details.stats.minifiedSize / 1000)} KB`
+						details.stats.originalSize / 1000,
+					)} KB -> ${chalk.green(details.stats.minifiedSize / 1000)} KB`,
 				)
-			})
+			}),
 		)
 		.pipe(dest(distFolder))
 }
 
 export function copyThemeChalkSource() {
-	return src(path.resolve(__dirname, '../packages/theme-chalk/**')).pipe(
-		dest(path.resolve(distBundle, '../../dist/style'))
-	)
+	return src(entryFolder).pipe(dest(distFolder))
 }
 
-export const build = parallel(
-	copyThemeChalkSource,
-	series(buildThemeChalk)
-)
+export const build = parallel(copyThemeChalkSource, series(buildThemeChalk))
 
 export default build
