@@ -1,3 +1,3 @@
-import DButton from '@demo-ui/components/button'
+import DButton from './components/button'
 
 export default [DButton]

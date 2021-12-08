@@ -1,6 +1,6 @@
 import path from 'path'
 import chalk from 'chalk'
-import { src, dest, series, parallel } from 'gulp'
+import { src, dest, parallel } from 'gulp'
 import gulpSass from 'gulp-sass'
 import dartSass from 'sass'
 import autoprefixer from 'gulp-autoprefixer'
@@ -9,7 +9,7 @@ import cleanCSS from 'gulp-clean-css'
 const distFolder = path.resolve(__dirname, '../dist/style')
 const entryFolder = path.resolve(__dirname, '../packages/theme-chalk/**.scss')
 
-function buildThemeChalk() {
+const buildThemeChalk = () => {
 	const sass = gulpSass(dartSass)
 	return src(entryFolder)
 		.pipe(sass.sync())
@@ -30,6 +30,6 @@ export function copyThemeChalkSource() {
 	return src(entryFolder).pipe(dest(distFolder))
 }
 
-export const build = parallel(copyThemeChalkSource, series(buildThemeChalk))
+export const build = parallel(copyThemeChalkSource, buildThemeChalk)
 
 export default build

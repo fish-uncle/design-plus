@@ -4,7 +4,7 @@ button(:class="className" :style="style" @click="handleClick" :autofocus="autofo
 </template>
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
-import { buttonEmits, buttonProps } from './button'
+import { buttonEmits, buttonProps } from './type'
 import { useCssVar } from '@vueuse/core'
 import { lighten, darken } from '@demo-ui/utils/color'
 

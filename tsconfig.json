@@ -31,9 +31,8 @@
 		"typings/vue-shim.d.ts",
 		"typings/global.d.ts",
 		"build/**/*.ts",
-		"src/**/*.ts",
 		"docs/**/*.ts",
-		"src/**/*.vue",
+		"docs/**/*.vue",
 		"packages/**/*.ts",
 		"packages/**/*.vue"
 	],
