@@ -1,24 +1,26 @@
-<script setup lang="ts">
-defineProps({
-	file: {
-		type: String,
-		required: true,
-	},
-	demo: {
-		type: Object,
-		required: true,
+<template>
+	<div class="example-showcase">
+		<client-only>
+			<component :is="demo" v-if="demo" v-bind="$attrs" />
+		</client-only>
+	</div>
+</template>
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+	name: 'vp-example',
+	props: {
+		file: {
+			type: String,
+			required: true,
+		},
+		demo: {
+			type: Object,
+			required: false,
+		},
 	},
 })
 </script>
-
-<template>
-	<div class="example-showcase">
-		<ClientOnly>
-			<component :is="demo" v-if="demo" v-bind="$attrs" />
-		</ClientOnly>
-	</div>
-</template>
-
 <style lang="scss" scoped>
 .example-showcase {
 	padding: 1rem;
@@ -30,7 +32,7 @@ defineProps({
 			linear-gradient(45deg, transparent 75%, rgb(249, 249, 250) 75%),
 			linear-gradient(135deg, transparent 75%, rgb(249, 249, 250) 75%);
 		background-size: 20px 20px;
-		background-position: 0px 0px, 10px 0px, 10px -10px, 0px 10px;
+		background-position: 0 0, 10px 0, 10px -10px, 0 10px;
 	}
 
 	@at-root .dark .example-showcase {

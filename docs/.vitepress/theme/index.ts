@@ -10,6 +10,6 @@ export default {
 	logo: '/logo.png',
 	enhanceApp: ({ app }) => {
 		app.use(demoUI)
-		app.component(vpDemo.name, vpDemo)
+		app.component('vp-demo', vpDemo)
 	},
 }

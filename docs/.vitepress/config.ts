@@ -1,3 +1,5 @@
+import { mdPlugin } from './config/plugins'
+
 module.exports = {
 	lang: 'zh-CN',
 	title: 'demo-ui',
@@ -5,6 +7,9 @@ module.exports = {
 	base: '/',
 	head: [['link', { rel: 'icon', href: '/logo.ico' }]],
 	plugins: [],
+	markdown: {
+		config: (md) => mdPlugin(md),
+	},
 	themeConfig: {
 		repo: 'fish-uncle/demo-ui',
 		logo: '/logo.png',
