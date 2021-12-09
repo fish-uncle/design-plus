@@ -8,8 +8,6 @@ before_script:
     - npm run docs:build
 script:
     - npm run test
-after_success:
-    - npm run coverall
 deploy:
     provider: pages
     skip-cleanup: true
