@@ -6,14 +6,12 @@ export const buttonProps = {
 		values: buttonType,
 		default: 'default',
 	},
-	loading: Boolean,
-	disabled: Boolean,
-	autofocus: Boolean,
+	disabled: {
+		type: Boolean,
+		default: false,
+	},
 	round: Boolean,
 	color: String,
-	autoInsertSpace: {
-		type: Boolean,
-	},
 }
 
 export const buttonEmits = {

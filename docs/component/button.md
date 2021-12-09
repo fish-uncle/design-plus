@@ -25,17 +25,15 @@ button/disabled
 button/custom
 :::
 
-## Button 属性
+## 属性
 |  属性   | 说明  | 类型  | 可选值  | 默认值  |
 |  ----  | ----  | ----  | ----  | ----  |
-| size  | 尺寸 | string | medium / small / mini | — |
 | type  | 类型 | string | primary / success / warning / danger / info / text | — |
 | round  | 是否为圆角按钮 | boolean | — | false |
 | color  | 自定义颜色 | string | 16进制颜色码 | — |
-| loading  | 是否为加载中状态 | boolean | — | false |
 | disabled  | 是否为禁用状态 | boolean | — | false |
 
-## Button 插槽
+## 插槽
 |  插槽名   | 说明  |
 |  ----  | ----  |
 | —  | 自定义默认内容 |

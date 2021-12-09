@@ -49,7 +49,7 @@
 		--d-button-active-text-color: var(--d-color-primary);
 		--d-button-disabled-text-color: #c0c4cc;
 		--d-button-text-color: var(--d-text-color-regular);
-		--d-button-disabled-border-color: #e4e7ed;
+		--d-button-disabled-border-color: var(--d-text-color-disabled);
 		--d-button-border-color: #dcdfe6;
 		--d-button-hover-bg-color: var(--d-color-primary-light-9);
 		&:hover,

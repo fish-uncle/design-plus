@@ -1,0 +1,65 @@
+@use 'mixins' as *;
+@use 'config' as *;
+@use 'var' as *;
+
+@include b(link) {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	position: relative;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0;
+	color: var(--el-link-text-color);
+
+	&:hover {
+		text-decoration: none;
+		color: var(--d-link-hover-text-color);
+	}
+
+	@include m(default) {
+		--el-link-text-color: var(--d-text-color-regular);
+		--d-link-hover-text-color: var(--d-color-primary);
+		--d-link-disabled-text-color: var(--d-text-color-disabled);
+	}
+
+	@include m(success) {
+		--el-link-text-color: var(--d-color-success);
+	}
+
+	@include m(primary) {
+		--el-link-text-color: var(--d-color-primary);
+	}
+
+	@include m(info) {
+		--el-link-text-color: var(--d-color-info);
+	}
+
+	@include m(warning) {
+		--el-link-text-color: var(--d-color-warning);
+	}
+
+	@include m(danger) {
+		--el-link-text-color: var(--d-color-danger);
+	}
+
+	@include when(underline) {
+		&:hover:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 0;
+			bottom: 0;
+			border-bottom: 1px solid var(--d-link-hover-text-color);
+		}
+	}
+
+	@include when(disabled) {
+		cursor: not-allowed;
+		color: var(--d-link-disabled-text-color);
+	}
+}

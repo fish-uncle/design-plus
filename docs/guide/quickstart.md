@@ -8,7 +8,7 @@
 // main.ts
 import { createApp } from 'vue'
 import demoUI from 'demo-ui'
-import 'demo-ui/dist/index.css'
+import 'demo-ui/umd/index.css'
 import App from './App.vue'
 
 const app = createApp(App)

@@ -37,8 +37,12 @@ module.exports = {
 					text: 'Basic 基础组件',
 					children: [
 						{
-							text: 'Button',
+							text: 'Button 按钮',
 							link: '/component/button.html',
+						},
+						{
+							text: 'Link 链接',
+							link: '/component/link.html',
 						},
 					],
 				},

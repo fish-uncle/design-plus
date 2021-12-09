@@ -2,7 +2,7 @@
 ## 环境支持
 demo-ui 可以在支持 [ES2018](https://caniuse.com/?feats=mdn-javascript_builtins_regexp_dotall,mdn-javascript_builtins_regexp_lookbehind_assertion,mdn-javascript_builtins_regexp_named_capture_groups,mdn-javascript_builtins_regexp_property_escapes,mdn-javascript_builtins_symbol_asynciterator,mdn-javascript_functions_method_definitions_async_generator_methods,mdn-javascript_grammar_template_literals_template_literal_revision,mdn-javascript_operators_destructuring_rest_in_objects,mdn-javascript_operators_spread_spread_in_destructuring,promise-finally) 和 [ResizeObserver](https://caniuse.com/resizeobserver) 的浏览器上运行。 如果您确实需要支持旧版本的浏览器，请自行添加 [Babel](https://babeljs.io/) 和相应的 Polyfill 。
 
-由于 Vue 3 不再支持 IE11，demo-ui 也不再支持 IE 浏览器。
+由于 Vue 3 不再支持 IE11，demoUI 也不再支持 IE 浏览器。
 
 |  ![](/edge_32x32.png)   | ![](/firefox_32x32.png)  | ![](/chrome_32x32.png)  | ![](/safari_32x32.png)  |
 |  ----  | ----  | ----  | ----  |
@@ -36,7 +36,7 @@ $ pnpm install demo-ui
 ```html
 <head>
   <!-- 导入样式 -->
-  <link rel="stylesheet" href="//unpkg.com/demo-ui/dist/index.css" />
+  <link rel="stylesheet" href="//unpkg.com/demo-ui/umd/index.css" />
   <!-- 导入 Vue 3 -->
   <script src="//unpkg.com/vue@next"></script>
   <!-- 导入组件库 -->
@@ -49,7 +49,7 @@ $ pnpm install demo-ui
   <!-- 导入样式 -->
   <link
     rel="stylesheet"
-    href="//cdn.jsdelivr.net/npm/demo-ui/dist/index.css"
+    href="//cdn.jsdelivr.net/npm/demo-ui/umd/index.css"
   />
   <!-- 导入 Vue 3 -->
   <script src="//cdn.jsdelivr.net/npm/vue@next"></script>
