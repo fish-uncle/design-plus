@@ -4,7 +4,7 @@
 	"main": "umd/index.js",
 	"unpkg": "umd/index.js",
 	"typings": "types/index.d.ts",
-	"style": "umd/index.css",
+	"style": "umd/style.css",
 	"module": "es/index.js",
 	"keywords": [
 		"typescript",
@@ -33,6 +33,7 @@
 		"@vueuse/core": "^7.1.2",
 		"core-js": "^3.6.5",
 		"vue": "^3.2.4",
+		"vue-demi": "^0.12.1",
 		"vue-loader": "^16.5.0",
 		"vue-router": "^4.0.11"
 	},

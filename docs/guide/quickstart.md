@@ -8,7 +8,7 @@
 // main.ts
 import { createApp } from 'vue'
 import demoUI from 'demo-ui'
-import 'demo-ui/umd/index.css'
+import 'demo-ui/umd/style.css'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -27,15 +27,31 @@ npm install babel-plugin-component -D
 然后，将 .babelrc 修改为：
 ```json
 {
-  "presets": [["es2015", { "modules": false }]],
-  "plugins": [
-    [
-      "component",
-      {
-        "libraryName": "demo-ui",
-        "styleLibraryName": "theme-chalk"
-      }
-    ]
+	"plugins": [
+	  [
+		  "component",
+		  {
+			  "libraryName": "demo-ui",
+			  "libDir": "es"
+		  }
+	  ]
   ]
 }
+```
+
+```vue
+<template>
+	<d-button type="success" round>按钮</d-button> 
+</template>
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { DButton } from 'demo-ui'
+
+export default defineComponent({
+	name: 'home',
+	components: {
+		DButton,
+	},
+})
+</script>
 ```

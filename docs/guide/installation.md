@@ -36,7 +36,7 @@ $ pnpm install demo-ui
 ```html
 <head>
   <!-- 导入样式 -->
-  <link rel="stylesheet" href="//unpkg.com/demo-ui/umd/index.css" />
+  <link rel="stylesheet" href="//unpkg.com/demo-ui/umd/style.css" />
   <!-- 导入 Vue 3 -->
   <script src="//unpkg.com/vue@next"></script>
   <!-- 导入组件库 -->
@@ -49,7 +49,7 @@ $ pnpm install demo-ui
   <!-- 导入样式 -->
   <link
     rel="stylesheet"
-    href="//cdn.jsdelivr.net/npm/demo-ui/umd/index.css"
+    href="//cdn.jsdelivr.net/npm/demo-ui/umd/style.css"
   />
   <!-- 导入 Vue 3 -->
   <script src="//cdn.jsdelivr.net/npm/vue@next"></script>

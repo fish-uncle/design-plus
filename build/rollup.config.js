@@ -19,7 +19,7 @@ const inputOptions = {
 	input: 'packages/index.ts',
 	plugins: [
 		replace({
-			preventAssignment:true,
+			preventAssignment: true,
 			'process.env.version': JSON.stringify(pkg.version),
 		}),
 		alias({
@@ -38,16 +38,17 @@ const inputOptions = {
 			minify: true,
 		}),
 		postcss({
-			extract: true,
+			extract: 'style.css',
+			minimize: true,
 			plugins: [autoprefixer()],
 		}),
 		commonjs(),
 		copy({
 			targets: [
-				{ src: path.resolve(__dirname,'../LICENSE.md'), dest: 'dist' },
-				{ src: path.resolve(__dirname,'../package.json'), dest: 'dist' },
-			]
-		})
+				{ src: path.resolve(__dirname, '../LICENSE.md'), dest: 'dist' },
+				{ src: path.resolve(__dirname, '../package.json'), dest: 'dist' },
+			],
+		}),
 	],
 	external(id) {
 		return /^vue/.test(id)
@@ -66,13 +67,13 @@ const getInputs = () => {
 const generateModuleOption = format => {
 	return getInputs().map(input => {
 		const compName = input.split('/').slice(-2, -1)
-		const prefixCompName = `d-${compName}`
+		const prefixCompName = `${compName}`
 		return {
 			...inputOptions,
 			input,
 			output: {
 				format,
-				file: `dist/${format}/${compName}/index.js`,
+				file: `dist/${format}/d-${compName}/index.js`,
 				name: prefixCompName,
 				globals: {
 					vue: 'Vue',

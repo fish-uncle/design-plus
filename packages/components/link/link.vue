@@ -29,7 +29,7 @@ export default defineComponent({
 		const style = computed(() => {
 			let styles = {}
 			const typeColor = useCssVar(`--d-color-${props.type}`)
-			const linkColor = props.color || typeColor.value
+			const linkColor = typeColor.value
 			if (linkColor) {
 				const lightenBgColor = lighten(linkColor)
 				styles = {

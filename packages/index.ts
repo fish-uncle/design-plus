@@ -1,8 +1,19 @@
-import installer from './installer'
+import DButton from './components/button'
+import DLink from './components/link'
+import { App } from 'vue'
 
-export * from './components'
+export { default as DButton } from './components/button'
+export { default as DLink } from './components/link'
 
-export const install = installer.install
-export const version = installer.version
-
-export default { install, version }
+const component = { DButton, DLink }
+export default {
+	version() {
+		return process.env.version
+	},
+	install(app: App) {
+		Object.values(component).forEach(item => {
+			// @ts-ignore
+			app.use(item)
+		})
+	},
+}
