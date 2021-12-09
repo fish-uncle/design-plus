@@ -7,5 +7,5 @@ git config --global user.email "fishuncle@126.com"
 git init
 git add -A
 git commit -m 'deploy'
-git push -f https://${access_token}@github.com/fish-uncle/design-plus-doc.git master:gh-pages
+git push -f https://${GITHUB_TOKEN}@github.com/fish-uncle/design-plus-doc.git master:gh-pages
 cd -
