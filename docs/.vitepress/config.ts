@@ -4,7 +4,7 @@ module.exports = {
 	lang: 'zh-CN',
 	title: 'design-plus',
 	description: 'design-plus',
-	base: '/',
+	base: '/design-plus-doc/',
 	head: [['link', { rel: 'icon', href: '/logo.ico' }]],
 	plugins: [],
 	markdown: {
