@@ -24,7 +24,7 @@ const genVueTypes = async (root, outDir = path.resolve(__dirname, '../dist/types
 			outDir,
 			baseUrl: path.resolve(__dirname, '../'),
 			paths: {
-				'@demo-ui/*': ['packages/*'],
+				'@design-plus/*': ['packages/*'],
 			},
 			skipLibCheck: true,
 		},
@@ -94,7 +94,7 @@ const genVueTypes = async (root, outDir = path.resolve(__dirname, '../dist/types
 
 			await fs.promises.writeFile(
 				filepath,
-				outputFile.getText().replace(new RegExp('@demo-ui', 'g'), '../../'),
+				outputFile.getText().replace(new RegExp('@design-plus', 'g'), '../../'),
 				'utf8',
 			)
 			const name = filepath.split('/')

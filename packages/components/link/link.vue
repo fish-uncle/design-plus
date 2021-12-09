@@ -7,7 +7,7 @@ a(:class="className" :href="disabled || !href ? undefined : href" :style="style"
 import { defineComponent, computed } from 'vue'
 import { linkEmits, linkProps } from './type'
 import { useCssVar } from '@vueuse/core'
-import { lighten } from '@demo-ui/utils/color'
+import { lighten } from '@design-plus/utils/color'
 
 export default defineComponent({
 	name: 'DLink',

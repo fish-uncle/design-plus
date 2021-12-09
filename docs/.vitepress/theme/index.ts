@@ -1,5 +1,5 @@
 // @ts-ignore
-import demoUI from '@demo-ui'
+import designPlus from '@design-plus'
 import DefaultTheme from 'vitepress/dist/client/theme-default'
 import vpDemo from '../components/vp-demo.vue'
 
@@ -9,7 +9,7 @@ export default {
 	...DefaultTheme,
 	logo: '/logo.png',
 	enhanceApp: ({ app }) => {
-		app.use(demoUI)
+		app.use(designPlus)
 		app.component('vp-demo', vpDemo)
 	},
 }

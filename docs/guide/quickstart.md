@@ -1,5 +1,5 @@
 # 快速开始
-本节将介绍如何在项目中使用 demo-ui。
+本节将介绍如何在项目中使用 design-plus。
 
 ## 完整引入
 如果你对打包后的文件大小不是很在乎，那么使用完整导入会更方便。
@@ -7,13 +7,13 @@
 ```typescript
 // main.ts
 import { createApp } from 'vue'
-import demoUI from 'demo-ui'
-import 'demo-ui/umd/style.css'
+import designPlus from 'design-plus'
+import 'design-plus/umd/style.css'
 import App from './App.vue'
 
 const app = createApp(App)
 
-app.use(demoUI)
+app.use(designPlus)
 app.mount('#app')
 ```
 
@@ -31,7 +31,7 @@ npm install babel-plugin-component -D
 	  [
 		  "component",
 		  {
-			  "libraryName": "demo-ui",
+			  "libraryName": "design-plus",
 			  "libDir": "es"
 		  }
 	  ]
@@ -45,7 +45,7 @@ npm install babel-plugin-component -D
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { DButton } from 'demo-ui'
+import { DButton } from 'design-plus'
 
 export default defineComponent({
 	name: 'home',

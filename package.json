@@ -1,5 +1,5 @@
 {
-	"name": "demo-ui",
+	"name": "design-plus",
 	"version": "0.0.1-alpha.0",
 	"main": "umd/index.js",
 	"unpkg": "umd/index.js",

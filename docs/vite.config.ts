@@ -8,7 +8,7 @@ export default defineConfig({
 	plugins: [sassDts(), Inspect()],
 	resolve: {
 		alias: {
-			'@demo-ui': path.resolve(__dirname, '../packages'),
+			'@design-plus': path.resolve(__dirname, '../packages'),
 		},
 	},
 	optimizeDeps: {

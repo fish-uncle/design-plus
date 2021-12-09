@@ -24,7 +24,7 @@ const inputOptions = {
 		}),
 		alias({
 			entries: {
-				'@demo-ui': path.resolve(__dirname, '../packages'),
+				'@design-plus': path.resolve(__dirname, '../packages'),
 			},
 			customResolver,
 		}),
@@ -46,6 +46,8 @@ const inputOptions = {
 		copy({
 			targets: [
 				{ src: path.resolve(__dirname, '../LICENSE.md'), dest: 'dist' },
+				{ src: path.resolve(__dirname, '../README.md'), dest: 'dist' },
+				{ src: path.resolve(__dirname, '../CHANGELOG.md'), dest: 'dist' },
 				{ src: path.resolve(__dirname, '../package.json'), dest: 'dist' },
 			],
 		}),
@@ -93,7 +95,7 @@ export default [
 		output: {
 			format: 'umd',
 			file: 'dist/umd/index.js',
-			name: 'demoUI',
+			name: 'designPlus',
 			globals: {
 				vue: 'Vue',
 			},

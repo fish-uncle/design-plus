@@ -23,7 +23,7 @@
 		"pretty": true, // 给错误和消息设置样式，使用颜色和上下文。
 		"types": ["webpack-env", "jest"],
 		"paths": {
-			"@demo-ui/*": ["packages/*"]
+			"@design-plus/*": ["packages/*"]
 		},
 		"lib": ["esnext", "dom", "dom.iterable", "scripthost"]
 	},

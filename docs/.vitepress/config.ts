@@ -2,8 +2,8 @@ import { mdPlugin } from './config/plugins'
 
 module.exports = {
 	lang: 'zh-CN',
-	title: 'demo-ui',
-	description: 'demo-ui',
+	title: 'design-plus',
+	description: 'design-plus',
 	base: '/',
 	head: [['link', { rel: 'icon', href: '/logo.ico' }]],
 	plugins: [],
@@ -11,7 +11,7 @@ module.exports = {
 		config: (md) => mdPlugin(md),
 	},
 	themeConfig: {
-		repo: 'fish-uncle/demo-ui',
+		repo: 'fish-uncle/design-plus',
 		logo: '/logo.png',
 		nav: [
 			{ text: '指南', link: '/guide/design.html' },

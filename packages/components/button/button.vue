@@ -6,7 +6,7 @@ button(:class="className" :style="style" @click="handleClick" :autofocus="autofo
 import { defineComponent, computed } from 'vue'
 import { buttonEmits, buttonProps } from './type'
 import { useCssVar } from '@vueuse/core'
-import { lighten, darken } from '@demo-ui/utils/color'
+import { lighten, darken } from '@design-plus/utils/color'
 
 export default defineComponent({
 	name: 'DButton',

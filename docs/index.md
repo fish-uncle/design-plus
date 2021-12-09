@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo.png
-heroText: demo-ui
+heroText: design-plus
 tagline: 一套为开发者、设计师和产品经理准备的基于 Vue 3.0 的桌面端组件库
 actionText: 快速开始
 actionLink: /guide/design.html
