@@ -84,8 +84,6 @@ const genVueTypes = async (root, outDir = path.resolve(__dirname, '../dist/types
 	})
 
 	for (const sourceFile of sourceFiles) {
-		console.log(chalk.yellow('Generating definition for file: ' + chalk.bold(sourceFile.getBaseName())))
-
 		const emitOutput = sourceFile.getEmitOutput()
 		for (const outputFile of emitOutput.getOutputFiles()) {
 			const filepath = outputFile.getFilePath()
@@ -99,7 +97,8 @@ const genVueTypes = async (root, outDir = path.resolve(__dirname, '../dist/types
 				outputFile.getText().replace(new RegExp('@demo-ui', 'g'), '../../'),
 				'utf8',
 			)
-			console.log(chalk.green('Definition for file: ' + chalk.bold(sourceFile.getBaseName()) + ' generated'))
+			const name = filepath.split('/')
+			console.log(chalk.green('created ' + chalk.bold(name[name.length - 1])))
 		}
 	}
 }

@@ -62,5 +62,5 @@ export default defineComponent({
 })
 </script>
 <style lang="scss">
-@import '@demo-ui/theme-chalk/button.scss';
+@import '../../theme-chalk/button.scss';
 </style>
