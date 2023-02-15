@@ -1,6 +1,5 @@
 # design-plus
 
-(https://lgtm.com/projects/g/fish-uncle/design-plus/context:javascript)
 ![https://www.npmjs.org/package/design-plus](https://img.shields.io/npm/v/design-plus.svg)
 ![http://img.badgesize.io/https://unpkg.com/design-plus/umd/index.js?compression=gzip&label=gzip%20size:%20JS](http://img.badgesize.io/https://unpkg.com/design-plus/umd/index.js?compression=gzip&label=gzip%20size:%20JS)
 ![http://img.badgesize.io/https://unpkg.com/design-plus/umd/style.css?compression=gzip&label=gzip%20size:%20CSS](http://img.badgesize.io/https://unpkg.com/design-plus/umd/style.css?compression=gzip&label=gzip%20size:%20CSS)
